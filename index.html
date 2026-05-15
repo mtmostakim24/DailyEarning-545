@@ -1544,7 +1544,7 @@
             function updateAllDisplays() {
                 const progressPercent = dailyData.completed > 0 ? Math.round((dailyData.completed / TOTAL_TASKS) *
                     100) : 0;
-                const refLink = 'https://t.me/DailyEarning545_Bot?start=ref_' + userId;
+                const refLink = 'https://dailyearning545.vercel.app=ref_' + userId;
 
                 // Header
                 document.getElementById('header-balance').textContent = '$' + userData.lifetimeEarning.toFixed(3);
@@ -1737,7 +1737,7 @@
             }
 
             function copyReferralLink() {
-                const refLink = 'https://t.me/DailyEarning545_Bot?start=ref_' + userId;
+                const refLink = 'https://dailyearning545.vercel.app=ref_' + userId;
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     navigator.clipboard.writeText(refLink)
                         .then(() => showNotification('📋 Referral link copied! You earn $' + REFERRAL_BONUS.toFixed(
@@ -1763,7 +1763,7 @@
             }
 
             function shareReferralLink() {
-                const refLink = 'https://t.me/DailyEarning545_Bot?start=ref_' + userId;
+                const refLink = 'https://dailyearning545.vercel.app=ref_' + userId;
                 if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.share) {
                     window.Telegram.WebApp.share(refLink, { title: 'Earn with Daily Earning545' }, function(success) {
                         if (!success) copyReferralLink();
